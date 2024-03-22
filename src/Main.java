@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
 
         String option = "";
-        list.addAll(Arrays.asList("Mr. Boolean", "Nick Beres", "Sub 5 minute mile", "LCL Victory", "Physics", "Books", "Math", "ReallyLongString", "Gamestop", "Barnes and Noble"));
         while (!done) {
 
             option = InputHelper.getRegExString(scan, "Options: \nA – Add an item to the list \nD – Delete an item from the list \nP – Print the list \nQ – Quit the program", "[AaDdPpQq]");
@@ -25,12 +24,12 @@ public class Main {
     }
 
     public static void add() {
-        String bruh = InputHelper.getNonZeroLenString(scan, "ADD SOMETHING AND DO IT QUICK");
-        list.add(bruh);
+        String s = InputHelper.getNonZeroLenString(scan, "Add something to the list");
+        list.add(s);
     }
 
     public static void delete(){
-        int index = InputHelper.getRangedInt(scan, "ENTER AN INDEX BEFORE I LOSE MY PATIENCE", 0, list.size());
+        int index = InputHelper.getRangedInt(scan, "Enter an index", 0, list.size());
         list.remove(index);
     }
 
